@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Photos
+	p Express tock photo application.
+	div(id="photos")
+		each val in photos
+			div(class='photo')
+				h2= val.name
+				a(href='/photo/#{val._id}/download')
+					img(src='/photos/#{val.path}')
+
